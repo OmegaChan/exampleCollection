@@ -1,5 +1,14 @@
 <script setup lang="ts">
 import HelloWorld from './components/HelloWorld.vue'
+import { reactive } from 'vue';
+
+console.log('环境变量', import.meta.env);
+const urlObj = reactive({
+  urlReact: `http://localhost:${import.meta.env.VITE_react_demo}/`,
+  urlVue: `http://localhost:${import.meta.env.VITE_vue_demo}/`,
+});
+
+
 </script>
 
 <template>
@@ -17,8 +26,8 @@ import HelloWorld from './components/HelloWorld.vue'
   <div>
     子应用
   </div>
-  <WujieVue name="react" url="http://localhost:5174/"></WujieVue>
-  <WujieVue name="vue" url="http://localhost:5175/"></WujieVue>
+  <WujieVue name="react" :url="urlObj.urlReact"></WujieVue>
+  <WujieVue name="vue" :url="urlObj.urlVue"></WujieVue>
 </template>
 
 <style scoped>

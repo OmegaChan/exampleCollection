@@ -4,9 +4,12 @@
 ## 启动
 ```bash
 pnpm i
-cd main
-pnpm run dev
+# 各应用会以.env文件中配置的端口名进行启动
+pnpm -F * dev
 ```
 
 ## 相关link
+### 项目背景
 https://www.yuque.com/chanwj/vlkwxk/qvpv3kqws5hno3qt?singleDoc#
+### 项目更新目录
+https://www.yuque.com/chanwj/ixiw69/erc4umk558evkpi7?singleDoc#
