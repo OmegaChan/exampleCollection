@@ -14,7 +14,7 @@ pnpm -F * dev
 ### react
 #### react-01
 列、行维度的合并，与动态删减
-![Alt text](image-1.png)
+![image](https://cdn.nlark.com/yuque/0/2023/png/34903562/1700056531099-c6c031eb-9942-48f2-a606-a2fecce19bd6.png)
 
 ## 相关link
 ### 项目背景
