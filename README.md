@@ -3,10 +3,18 @@
 
 ## 启动
 ```bash
+npm i pnpm -g
 pnpm i
 # 各应用会以.env文件中配置的端口名进行启动
+# 在mac中词命令不可用，需分别启动主、子应用
 pnpm -F * dev
 ```
+
+## 应用
+### react
+#### react-01
+列、行维度的合并，与动态删减
+![Alt text](image-1.png)
 
 ## 相关link
 ### 项目背景
