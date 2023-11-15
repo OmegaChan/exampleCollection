@@ -1,46 +1,30 @@
 <script setup lang="ts">
-import HelloWorld from './components/HelloWorld.vue'
-import { reactive } from 'vue';
+import { watchEffect } from 'vue';
+import AsideMenu from './components/AsideMenu.vue';
+import { useChangeUrl } from './hooks/useChangeUrl';
 
-console.log('环境变量', import.meta.env);
-const urlObj = reactive({
-  urlReact: `http://localhost:${import.meta.env.VITE_react_demo}/`,
-  urlVue: `http://localhost:${import.meta.env.VITE_vue_demo}/`,
-});
-
+const { activeKey, urlObj, setUrlObj } = useChangeUrl();
+watchEffect(() => {
+  console.log({ urlObj: urlObj.urlReact });
+})
 
 </script>
 
 <template>
-  <div>主应用 start</div>
-  <div>
-    <a href="https://vitejs.dev" target="_blank">
-      <img src="/vite.svg" class="logo" alt="Vite logo" />
-    </a>
-    <a href="https://vuejs.org/" target="_blank">
-      <img src="./assets/vue.svg" class="logo vue" alt="Vue logo" />
-    </a>
-  </div>
-  <HelloWorld msg="Vite + Vue" />
-  <div>主应用 end</div>
-  <div>
-    子应用
-  </div>
-  <WujieVue name="react" :url="urlObj.urlReact"></WujieVue>
-  <WujieVue name="vue" :url="urlObj.urlVue"></WujieVue>
+  <h1 class="text-3xl font-bold underline">
+    Monorepo架构-微前端
+  </h1>
+  <el-tag class="ml-2" type="success">主应用(基于vue3 + vite)</el-tag>
+  <el-container>
+    <el-aside width="200px">
+      <AsideMenu :setUrlObj="setUrlObj" />
+    </el-aside>
+    <el-main>
+      <WujieVue name="react" :url="urlObj.urlReact" v-if="activeKey==='react'"></WujieVue>
+      <WujieVue name="vue" :url="urlObj.urlVue" v-else></WujieVue>
+    </el-main>
+  </el-container>
 </template>
 
 <style scoped>
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.vue:hover {
-  filter: drop-shadow(0 0 2em #42b883aa);
-}
 </style>
