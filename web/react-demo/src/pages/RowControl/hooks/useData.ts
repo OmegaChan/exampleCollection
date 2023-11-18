@@ -1,55 +1,56 @@
 import { useEffect, useState } from "react";
+import { useMockApi } from '../../../hooks/useMockApi';
 import { DataType } from "../type";
 
 export const useData = () => {
   const [data, setData] = useState<Array<DataType>>([]);
-  const promiseApi = new Promise((resolve) => {
-    setTimeout(resolve, 0, [
-      {
-        key: "178",
-        name: "John Brown",
-        age: 32,
-        tel: "0571-22098909",
-        phone: 18889898989,
-        address: "New York No. 1 Lake Park"
-      },
-      {
-        key: "267",
-        name: "Jim Green",
-        tel: "0571-22098333",
-        phone: 18889898888,
-        age: 42,
-        address: "London No. 1 Lake Park"
-      },
-      {
-        key: "3456",
-        name: "Joe Black",
-        age: 32,
-        tel: "0575-22098909",
-        phone: 18900010002,
-        address: "Sydney No. 1 Lake Park"
-      },
-      {
-        key: "45",
-        name: "Jim Red",
-        age: 18,
-        tel: "0575-22098909",
-        phone: 18900010002,
-        address: "London No. 2 Lake Park"
-      },
-      {
-        key: "5090",
-        name: "Jake White",
-        age: 18,
-        tel: "0575-22098909",
-        phone: 18900010002,
-        address: "Dublin No. 2 Lake Park"
-      }
-    ]);
-  });
+  const { promiseApi } = useMockApi();
+
+  const mockData = [
+    {
+      key: "178",
+      name: "John Brown",
+      age: 32,
+      tel: "0571-22098909",
+      phone: 18889898989,
+      address: "New York No. 1 Lake Park"
+    },
+    {
+      key: "267",
+      name: "Jim Green",
+      tel: "0571-22098333",
+      phone: 18889898888,
+      age: 42,
+      address: "London No. 1 Lake Park"
+    },
+    {
+      key: "3456",
+      name: "Joe Black",
+      age: 32,
+      tel: "0575-22098909",
+      phone: 18900010002,
+      address: "Sydney No. 1 Lake Park"
+    },
+    {
+      key: "45",
+      name: "Jim Red",
+      age: 18,
+      tel: "0575-22098909",
+      phone: 18900010002,
+      address: "London No. 2 Lake Park"
+    },
+    {
+      key: "5090",
+      name: "Jake White",
+      age: 18,
+      tel: "0575-22098909",
+      phone: 18900010002,
+      address: "Dublin No. 2 Lake Park"
+    }
+  ];
 
   useEffect(() => {
-    promiseApi.then((res: any) => {
+    promiseApi(mockData, 0).then((res: any) => {
       console.log("获取数据", res);
       let code: string = "";
       let idx: number = -1;

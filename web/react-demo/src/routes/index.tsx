@@ -1,5 +1,6 @@
 import React from "react";
-import RowControl from '../pages/RowControl'
+import RowControl from '../pages/RowControl';
+import RecursionCom from '../pages/RecursionCom';
 import { useRoutes } from 'react-router-dom'
 
 
@@ -9,6 +10,10 @@ export const useRouterConfig = () => {
     {
         path: '/rowControl',
         element: <RowControl />,
+    },
+    {
+      path: '/recursionCom',
+      element: <RecursionCom />,
     },
   ];
   const element = useRoutes(router);

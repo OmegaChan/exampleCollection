@@ -11,7 +11,7 @@ watchEffect(() => {
 </script>
 
 <template>
-  <h1 class="text-3xl font-bold underline">
+  <h1 class="text-3xl font-bold my-5 ml-2">
     Monorepo架构-微前端
   </h1>
   <el-tag class="ml-2" type="success">主应用(基于vue3 + vite)</el-tag>

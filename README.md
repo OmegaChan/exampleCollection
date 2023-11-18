@@ -12,9 +12,16 @@ pnpm -F * dev
 
 ## 应用
 ### react
+
 #### react-01
 列、行维度的合并，与动态删减
+
 ![image](https://cdn.nlark.com/yuque/0/2023/png/34903562/1700056531099-c6c031eb-9942-48f2-a606-a2fecce19bd6.png)
+
+#### react-02
+递归组件，默认递归三层
+
+![image](https://cdn.nlark.com/yuque/0/2023/png/34903562/1700310469273-73bbb907-a0d0-46ed-8e78-e94050f496f0.png)
 
 ## 相关link
 ### 项目背景
