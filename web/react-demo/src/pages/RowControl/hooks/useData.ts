@@ -51,7 +51,6 @@ export const useData = () => {
 
   useEffect(() => {
     promiseApi(mockData, 0).then((res: any) => {
-      console.log("获取数据", res);
       let code: string = "";
       let idx: number = -1;
       res?.forEach((item: DataType, index: number) => {

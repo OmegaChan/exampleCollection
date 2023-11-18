@@ -42,19 +42,6 @@ export const useData = () => {
 
   useEffect(() => {
     promiseApi(mockData, 0).then((res: any) => {
-      console.log("获取数据-re", res);
-    //   let code: string = "";
-    //   let idx: number = -1;
-    //   res?.forEach((item: DataType, index: number) => {
-    //     if (item.tel !== code) {
-    //       code = item.tel;
-    //       idx = index;
-    //       item.rowSpan = 1;
-    //     } else {
-    //       res[idx].rowSpan += 1;
-    //       item.rowSpan = 0;
-    //     }
-    //   });
       setData(res);
     });
   }, []);
