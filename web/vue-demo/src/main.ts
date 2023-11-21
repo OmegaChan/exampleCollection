@@ -1,5 +1,8 @@
 import { createApp } from 'vue'
-// import './style.css'
+import router from './router';
+import _ from 'lodash';
+import './style.css'
 import App from './App.vue'
+window._ = _;
 
-createApp(App).mount('#app')
+createApp(App).use(router).mount('#app')

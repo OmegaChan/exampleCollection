@@ -3,9 +3,8 @@
 
 <template>
   <div>
-    子应用-vue
+    test
   </div>
-  <router-view></router-view>
 </template>
 
 <style scoped>

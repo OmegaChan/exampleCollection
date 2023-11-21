@@ -31,8 +31,7 @@ const handleMenuSelect = (key: string) => {
         <el-icon><location /></el-icon>
         <span>Vue子应用</span>
       </template>
-      <el-menu-item index="vue-01">item one</el-menu-item>
-      <el-menu-item index="vue-02">item two</el-menu-item>
+      <el-menu-item index="vue-01">可配置化表格</el-menu-item>
     </el-sub-menu>
   </el-menu>
 </template>
