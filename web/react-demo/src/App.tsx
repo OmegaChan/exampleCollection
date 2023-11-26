@@ -2,7 +2,6 @@ import React from 'react';
 import { Tag } from 'antd';
 import { useRouterConfig } from './routes';
 
-
 function App() {
   const { element } = useRouterConfig();
   return (

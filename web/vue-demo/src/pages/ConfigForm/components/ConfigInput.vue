@@ -9,9 +9,9 @@ type Props = {
 }
 
 const props = withDefaults(defineProps<Props>(), {
-  configData: [],
-  str2obj: () => {},
-  obj2str: () => {}
+  configData: undefined,
+  str2obj: () => ({}),
+  obj2str: () => '',
 })
 const textarea = ref('');
 

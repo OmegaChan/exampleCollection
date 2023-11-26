@@ -1,17 +1,16 @@
 <script setup lang="ts">
-import { Ref } from "vue";
 import { ConfigData } from '../type';
 
 type Props = {
-  showData: Ref<boolean>
+  showData: any
   formData: Record<string, any>
   configData: ConfigData
 }
 
 const props = withDefaults(defineProps<Props>(), {
   showData: false,
-  formData: {},
-  configData: [],
+  formData: () => ({}),
+  configData: undefined,
 })
 
 const btnFunc = (func: any) => {

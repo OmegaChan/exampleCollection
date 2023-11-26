@@ -1,8 +1,6 @@
-import { Ref } from "vue";
-
 declare interface Window {
   _: any
-  showData: Ref<boolean>
+  showData: any
 }
 
 declare const _: _.LoDashStatic;
