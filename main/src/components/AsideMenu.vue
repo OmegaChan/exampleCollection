@@ -25,6 +25,7 @@ const handleMenuSelect = (key: string) => {
       </template>
       <el-menu-item index="react-01">表格分行</el-menu-item>
       <el-menu-item index="react-02">递归组件</el-menu-item>
+      <el-menu-item index="react-03">拖拽表格</el-menu-item>
     </el-sub-menu>
     <el-sub-menu index="vue">
       <template #title>

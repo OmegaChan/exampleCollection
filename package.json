@@ -20,7 +20,7 @@
     "unplugin-vue-components": "^0.25.2"
   },
   "dependencies": {
-    "chanhooks": "^1.0.0",
+    "chanhooks": "1.0.0-alpha.4",
     "element-plus": "^2.4.2",
     "vue-router": "4"
   }

@@ -1,12 +1,12 @@
 import { useEffect, useState } from "react";
-import { useMockApi } from '../../../hooks/useMockApi';
+import { useMockApi } from 'chanhooks';
 import { DataType } from "../type";
 
 export const useData = () => {
   const [data, setData] = useState<Array<DataType>>([]);
   const { promiseApi } = useMockApi();
 
-  const mockData = [
+  const mockData: Array<DataType> = [
     {
       key: "178",
       name: "John Brown",
@@ -50,7 +50,10 @@ export const useData = () => {
   ];
 
   useEffect(() => {
-    promiseApi(mockData, 0).then((res: any) => {
+    promiseApi<Array<DataType>>({
+      mockData,
+      time: 0,
+    }).then((res: any) => {
       let code: string = "";
       let idx: number = -1;
       res?.forEach((item: DataType, index: number) => {

@@ -10,7 +10,7 @@ const { str2obj, obj2str } = useStrAndObj();
 </script>
 
 <template>
-  <div class="ml-2">
+  <div>
     <ConfigInput
       :configData="configData"
       :str2obj="str2obj"
