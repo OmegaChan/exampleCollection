@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { useMockApi } from '../../../hooks/useMockApi';
+import { useMockApi } from 'chanhooks';
 import { DataType } from "../type";
 
 export const useData = () => {
@@ -41,7 +41,10 @@ export const useData = () => {
   };
 
   useEffect(() => {
-    promiseApi(mockData, 0).then((res: any) => {
+    promiseApi<DataType>({
+      mockData,
+      time: 0,
+    }).then((res: any) => {
       setData(res);
     });
   }, []);
