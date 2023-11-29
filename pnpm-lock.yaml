@@ -9,8 +9,8 @@ importers:
   .:
     dependencies:
       chanhooks:
-        specifier: 1.0.0-alpha.4
-        version: 1.0.0-alpha.4
+        specifier: 1.0.0-alpha.5
+        version: 1.0.0-alpha.5
       element-plus:
         specifier: ^2.4.2
         version: 2.4.2(vue@3.3.8)
@@ -1603,8 +1603,8 @@ packages:
       supports-color: 7.2.0
     dev: true
 
-  /chanhooks@1.0.0-alpha.4:
-    resolution: {integrity: sha512-nurF9zEjbMEc6WOme4aUtpWc0P+ELuNzrCdrs6ZBVn6Y4sIoe2fgWw4ppAwOrvWqCkYfmQbRA3PL7Cl741lC2g==}
+  /chanhooks@1.0.0-alpha.5:
+    resolution: {integrity: sha512-mduo0LDVE2i/YqNXwlJP4hrXLsDd8TgrqlrZz2n7UvhnzR0mLrU7Vvgd0SQ961VKBXFuQM9gzezvHzPaaMGVyQ==}
     dependencies:
       lodash: 4.17.21
       react: 18.2.0
